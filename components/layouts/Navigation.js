@@ -29,6 +29,11 @@ export default function Navigation() {
                                 <a className="nav-link">Pokemon</a>
                             </Link>
                         </li>
+                        <li className="nav-item">
+                            <Link href="/product">
+                                <a className="nav-link">Product</a>
+                            </Link>
+                        </li>
                     </ul>
                     <ul className="navbar-nav px-2">
                         <li className="nav-item text-nowrap m-1">

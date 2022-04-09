@@ -6,7 +6,7 @@ export default function Pokemon({pokemon}) {
 
     /*const onSearch = (pokemon) => {
         const search = results.map((pokeman, i) => {
-
+            
         }
     }*/
     return (
@@ -14,7 +14,7 @@ export default function Pokemon({pokemon}) {
             <div className="container">
                 <div className="input-group rounded">
                     <input type="search" className="form-control rounded" placeholder="Search"
-                           aria-label="Search" onKeyUp={e => search()}
+                           aria-label="Search" /*onKeyUp={e => search()}*/
                            aria-describedby="search-addon"/>
                     <span className="input-group-text border-0" id="search-addon">
                     <i className="bi bi-search"></i>
