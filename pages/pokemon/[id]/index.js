@@ -10,9 +10,6 @@ export default function Home({pokeman}) {
                 <Link href="/pokemon">
                     <a><i className="bi bi-arrow-left-square-fill display-4 m-2"></i></a>
                 </Link>
-                <Link href="/panier">
-                    <a><i id="panier" className="bi bi-cart4 display-4 m-2"></i></a>
-                </Link>
             </div>
 
             <div className="row text-center ">

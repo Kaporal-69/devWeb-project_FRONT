@@ -3,18 +3,13 @@ import {useForm} from "react-hook-form";
 import Default from "../../components/layouts/Default";
 import {useRouter} from 'next/router'
 import {useUser} from "../../context/UserContext";
+import addProduct from "./addProduct";
+import Link from 'next/link'
 
 
 export default function Product({data}) {
     const {setUser, setToken, user, token, logout} = useUser();
     const {register, handleSubmit, watch, formState: {errors}} = useForm();
-    const onSubmit = (data) => {
-        axios.post('http://localhost:3000/auth/login', data).then(function (response) {
-            setToken(response.data.access_token);
-            setUser(data.name);
-        })
-
-    };
 console.log(user, "user")
 
     return (
@@ -27,6 +22,9 @@ console.log(user, "user")
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
                         <th scope="col">Price</th>
+                        {user.role === 'admin' &&
+                            <th scope="col"> Action</th>
+                        }
                     </tr>
                     </thead>
                     <tbody>
@@ -37,6 +35,9 @@ console.log(user, "user")
                                 <td>{product.name}</td>
                                 <td>{product.description}</td>
                                 <td>{product.price} €</td>
+                                {user.role === 'admin' &&
+                                    <td><Link href="/product/addProduct"><a className="btn btn-primary" ><i className="bi bi-plus"></i></a></Link></td>
+                                }
                             </tr>
                         })}
 

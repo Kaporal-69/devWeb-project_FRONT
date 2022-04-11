@@ -7,13 +7,15 @@ import {useUser} from "../../context/UserContext";
 export default function App() {
     const {setUser, setToken, user, token, logout} = useUser();
     const {register, handleSubmit, watch, formState: {errors}} = useForm();
+    const router = useRouter();
 
     const axios = require('axios');
     const onSubmit = (data) => {
-        axios.post('http://localhost:3000/auth/login', data).then(function (response) {
-            setToken(response.data.access_token);
-            setUser(data.name);
-        })
+        axios.post('http://localhost:3000/auth/login', data)
+            .then(function (response) {
+                setToken(response.data.access_token)
+                router.push('/product')
+            })
     };
 
     if (user == null) {
@@ -56,7 +58,7 @@ export default function App() {
             }
             {user &&
                 <div>
-                    <h1> Hello {user} !</h1>
+                    <h1> Hello {user.name} !</h1>
                     <button onClick={logout}>LOGOUT !</button>
                 </div>
 
