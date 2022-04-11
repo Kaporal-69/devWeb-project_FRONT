@@ -1,12 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Test from '../content/test.mdx'
 
 import Default from "../components/layouts/Default";
 
 export default function Home(props) {
     return (
         <Default>
-            <section className="jumbotron text-center">
+             <section className="jumbotron text-center">
                 <div className="container">
                     <h1>Bienvenue sur Pokedex Shop ! </h1>
                     <p className="lead text-muted">
