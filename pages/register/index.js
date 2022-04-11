@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form";
 import Default from "../../components/layouts/Default";
 import useRouter from "next/router";
 import Layout from "../../components/layouts/Layout";
+import Link from 'next/link';
 
 export default function Register() {
     const {register, handleSubmit, watch, formState: {errors}} = useForm();
@@ -52,7 +53,10 @@ export default function Register() {
 
                                                 <div className="d-flex justify-content-center">
                                                     <button type="submit"
-                                                            className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register
+                                                            className="btn btn-success btn-block btn-lg gradient-custom-4 text-body">
+                                                        <Link href="/login">
+                                                            Register
+                                                        </Link>
                                                     </button>
                                                 </div>
                                                 <p className="text-center text-muted mt-2 mb-0">Have already an account? <a
