@@ -30,7 +30,7 @@ export default function addProduct({data}) {
                         <div className="card shadow-2-strong">
                             <div className="card-body p-5 text-center">
 
-                                <h3 className="mb-5">Sign in</h3>
+                                <h3 className="mb-5">Add a new product you are ADMIN :)</h3>
                                 <form onSubmit={handleSubmit(onSubmit)}>
 
                                     <div className="form-outline mb-4">
@@ -47,7 +47,7 @@ export default function addProduct({data}) {
                                                className="form-control form-control-lg" {...register("price", {required: true})}/>
                                     </div>
 
-                                    <button className="btn btn-primary btn-lg btn-block" type="submit">Login
+                                    <button className="btn btn-primary btn-lg btn-block" type="submit">ADD
                                     </button>
                                 </form>
 
