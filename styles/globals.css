@@ -29,7 +29,7 @@ a {
   left: 1020px;
 }
 
-tr:nth-child(2) {
+tr:nth-child(1) {
   counter-reset: rowNumber;
 }
 table tr {
